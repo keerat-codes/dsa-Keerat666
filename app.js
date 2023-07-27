@@ -6,6 +6,8 @@ const PORT = 8000;
 
 require('dotenv').config();
 
+const starWars  = require('./controllers/starWars');
+app.use('/sw', starWars);
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
