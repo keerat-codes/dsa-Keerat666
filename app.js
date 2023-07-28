@@ -8,6 +8,8 @@ require('dotenv').config();
 
 const starWars  = require('./controllers/starWars');
 const problemListRoute = require('./routes/problemList');
+const stack  = require('./controllers/stack');
+app.use('/stack', stack);
 app.use('problemList', problemListRoute);
 app.use('/sw', starWars);
 app.use(cors())
